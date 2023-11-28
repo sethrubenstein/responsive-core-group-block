@@ -1,0 +1,8 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "sethrubenstein/core-group",
+	"version": "1.0.0",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

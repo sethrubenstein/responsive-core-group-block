@@ -1,0 +1,55 @@
+.wp-site-blocks,
+.is-root-container {
+	container: core-group-responsive-container / inline-size;
+}
+
+@container core-group-responsive-container (max-width: 420px) {
+	.wp-block-group[data-hide-on-mobile="true"] {
+		&.wp-block:before {
+			content: "This block is hidden on mobile.";
+			display: block;
+			text-align: center;
+			font-size: 0.8em;
+			border: 1px dashed #DDD;
+			color: #999;
+			padding: 1em;
+		}
+		& > * {
+			display: none !important;
+		}
+	}
+}
+
+@container core-group-responsive-container (min-width: 420px) and (max-width: 790px) {
+	.wp-block-group[data-hide-on-tablet="true"] {
+		&.wp-block:before {
+			content: "This block is hidden on tablet.";
+			display: block;
+			text-align: center;
+			font-size: 0.8em;
+			color: #999;
+			border: 1px dashed #DDD;
+			padding: 1em;
+		}
+		& > * {
+			display: none !important;
+		}
+	}
+}
+
+@container core-group-responsive-container (min-width: 791px) {
+	.wp-block-group[data-hide-on-desktop="true"] {
+		&.wp-block:before {
+			content: "This block is hidden on desktop.";
+			display: block;
+			text-align: center;
+			font-size: 0.8em;
+			color: #999;
+			border: 1px dashed #DDD;
+			padding: 1em;
+		}
+		& > * {
+			display: none !important;
+		}
+	}
+}
